@@ -142,15 +142,15 @@ function tareaEjercicio8(array6) {
             } else {
                 pos = i + 1;
             }
-            ovejaPeligro[a] = pos;
-            console.log("el lobo se va a comer a la oveja numero " + pos)
             if (array6[pos] === "sheep") {
+                console.log("el lobo se va a comer a la oveja numero " + pos);
+                ovejaPeligro[a] = pos;
                 array6.splice(pos, 1);
                 i--;
+                console.log(array6);
+                console.log("ya no hay peligro!");
+                a++;
             }
-            console.log(array6);
-            console.log("ya no hay peligro!");
-            a++;
         }
     }
     return ovejaPeligro;
